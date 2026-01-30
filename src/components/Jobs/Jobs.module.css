@@ -1,0 +1,11 @@
+:root{
+    --primary-bg-color:  #151515;;
+}
+.jobsPage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary-bg-color);
+    height: 100vh;
+    width: 100%;
+}

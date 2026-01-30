@@ -1,4 +1,5 @@
 import styles from "./sidebar.module.css"
+import {Link} from "react-router-dom"
 import {useState} from "react"
 import {
     HiHome,
@@ -38,10 +39,10 @@ import {
         <ul className={styles.menuSection}>
           <p className={styles.menuTitle}>RECRUITMENT</p>
           <li>
-            <HiBriefcase size={iconsSize}/> Jobs
+            <HiBriefcase size={iconsSize}/> <Link to="/jobs">Jobs</Link>
           </li>
           <li>
-            <HiUsers size={iconsSize}/> Candidates
+            <HiUsers size={iconsSize}/><Link to="/candidates">Candidates</Link>
           </li>
           <li>
             <HiOutlineDotsCircleHorizontal size={iconsSize}/> Empty?
