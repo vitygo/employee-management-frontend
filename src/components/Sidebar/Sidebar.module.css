@@ -1,0 +1,157 @@
+:root{
+    --primary-icon-size: 2rem;
+    --primary-menu-font-color: #898989;
+}
+
+.sidebar{
+    width: 100%;
+    background: #151515;
+    position: fixed;
+    margin-top: 7vh;
+    border-top: 1px solid #272727 ;
+
+    /* border-right: 1px solid #272727;
+  */
+   
+}
+
+li{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    padding: 0.9rem 2rem;
+    color: var(--primary-menu-font-color);
+    transition: 0.3s ease;
+    width: 60%;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+
+}
+
+li:hover{
+    cursor: pointer;
+    background-image: linear-gradient(to right, #6e38e0, #c800b7, #f30088, #ff235c, #ff5f36);
+    color: white;
+}
+
+
+
+/* temporary fix it later */
+.sidebarHeader{
+    padding: 1rem;
+    font-weight: bold;
+    font-size: 2rem; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #272727;
+    
+
+
+}
+
+
+.sidebarBody {
+    transition: max-height 0.5s ease-in-out, opacity 0.4s ease, transform 0.5s ease;
+    max-height: 800px; 
+    opacity: 1;
+    transform: translateY(0);
+    overflow: hidden;
+    border-right: 1px solid #272727;
+}
+
+.sidebarBodyDisabled {
+    max-height: 0; 
+    opacity: 0;
+    transform: translateY(-20px);
+    border-right: none;
+  
+}
+
+.sidebarBtn{
+    display: flex;
+    place-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-size: 2rem;
+}
+
+.menuTitle{
+    
+    color: var(--primary-menu-font-color);
+    padding-left: 1rem;
+}
+
+.menuSection{
+    display: flex;
+    flex-direction: column;
+    padding: unset;
+    margin: 0;
+}
+
+
+@media(min-width: 760px){
+    .sidebar{
+        width: 100%;
+        border-bottom: 1px solid #272727;
+    }
+
+    li{
+        font-size: 1.2rem;
+        width: 30%;
+    }
+
+}
+
+@media(min-width: 1024px){
+    .sidebar{
+        width: 100%;
+        border-bottom: 1px solid #272727;
+    }
+
+    li{
+        font-size: 2rem;
+        width: 30%;
+    }
+    .sidebarBtn{
+        display: flex;
+        place-items: center;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        font-size: 3rem;
+        
+    }
+    
+
+}
+
+@media(min-width: 1025px){
+    .sidebar{
+        height: 100%;
+        width: 13%;
+        border-bottom: 1px solid #272727;
+    }
+
+    li{
+        font-size: 1rem;
+        width: 55%;
+    }
+    .sidebarBtn{
+        display: none;
+        
+    }
+
+    .sidebarBodyDisabled {
+        max-height: unset; 
+        opacity: unset;
+        transform: unset;
+        border-right: unset;
+      
+    }
+    
+
+}
