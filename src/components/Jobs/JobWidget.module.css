@@ -1,0 +1,156 @@
+
+
+
+.jobWidget{
+    display: flex;
+    flex-direction: column;
+    min-width: 20rem;
+    height: 12rem;
+    background: #1E1E1E;
+    padding: 1rem;
+    border-radius: 0.8rem;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #272727;
+    gap: 1rem;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+.jobWidget:hover{
+    background: #1e1e1ece;
+   
+}
+
+
+.jobWidget::before{
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    left: 0px; 
+    top: 0px;
+    background: #CF1A2C;
+    z-index: 0;
+}
+
+
+
+.jobWidget::after{
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    right: -10px; 
+    top: -10px;
+    background: #CF1A2C;
+    border-radius: 50%; 
+    filter: blur(40px); 
+    opacity: 0.5; 
+    z-index: 0;
+    transition: 0.6s ease;
+}
+
+.jobWidget:hover::after{
+
+    width: 140px;
+    height: 140px;
+    background: #CF1A2C;
+}
+
+
+.jobWidgetHeader{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    
+}
+
+.additionalInfo{
+    display: flex;
+    gap: 0.3rem;
+}
+
+
+.additionalInfoBadge{
+    background: #1a1a1a;
+    border-radius: 2rem;
+    color:#898989;
+    padding: 0.6rem 1rem;
+    font-size: 0.78rem;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-weight: 600;
+}
+
+
+.jobWidgetJobData{
+    display: flex;
+    flex-direction: column;
+}
+
+.jobTitle{
+    font-size: 1.1rem;
+    font-weight: bold;
+
+}
+.jobPostDate{
+    color:#898989;
+    font-size:0.73rem;
+}
+
+
+.jobWidgetFooter{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.footerInfo{
+    display: flex;
+    align-items: flex-end;
+    color:#898989;
+    font-size: 0.728rem;
+
+}
+.footerInfo2{
+    display: flex;
+    align-items: flex-end;
+    color:#5ca15d;
+    font-size: 0.728rem;
+
+
+}
+
+.footerInfo span{
+    font-size: 2.426rem;
+    font-weight: bold;
+    color: white;
+}
+
+.openBtn{
+    background: rgba(101, 101, 101, 0.297);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    color: white;
+    position: absolute;
+    top: 0.4rem;
+    right: 0.4rem;
+    cursor: pointer;
+    z-index: 50;
+    transition: 0.3s ease;
+    
+}
+
+.openBtn:active{
+    color: rgb(152, 152, 152);
+    background: rgba(101, 101, 101, 0.433);
+  
+    
+}
